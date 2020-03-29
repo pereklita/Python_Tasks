@@ -12,5 +12,9 @@ if a%2==0:
 else:
     print("Непарне")  
 #Знаходження факторіалу         
-a=int(input("Enter_number_a: "))
-print ("Factorial of number a : ",math.factorial(a))
+n = int(input("Введіть число,факторіал якого ви хочете визначити "))
+factorial = 1
+while n > 1:
+    factorial *= n
+    n -= 1 
+print(factorial)
