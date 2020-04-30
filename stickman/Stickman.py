@@ -82,7 +82,7 @@ def collided_bottom(y, co1, co2):
     return False            
 
 class Sprite:
-    def __init__(self,game):
+    def __init__(self, game):
         self.game = game
         self.endgame = False
         self.coordinates = None
@@ -123,7 +123,7 @@ class StickFigureSprite(Sprite):
         self.coordinates = Coords()
         game.canvas.bind_all('<KeyPress-Left>', self.turn_left)
         game.canvas.bind_all('<KeyPress-Right>', self.turn_right)
-        game.canvas.bind_all('<space>',self.jump)
+        game.canvas.bind_all('<space>', self.jump)
 
     def turn_left(self, evt):
         if self.y == 0:
@@ -183,6 +183,7 @@ class StickFigureSprite(Sprite):
         co = self.coords()
         left = True
         right = True
+        top = True
         bottom = True
         falling =True
         if self.y > 0 and co.y2 >= self.game.canvas_height:
